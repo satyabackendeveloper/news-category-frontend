@@ -22,7 +22,7 @@ const CategoryPredictorForm = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({})
         };
-        const result = await fetch('http://15.206.27.251/api/news-category/list', requestOptions);
+        const result = await fetch('http://3.110.168.226/api/news-category/list', requestOptions);
         const response = await result.json();
         setPredictionList(response.data.rows);
     }
@@ -52,7 +52,7 @@ const CategoryPredictorForm = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ link: data.url })
         };
-        fetch('http://15.206.27.251/api/news-category', requestOptions)
+        fetch('http://3.110.168.226/api/news-category', requestOptions)
             .then(response => {
                 setData({
                     url: '',
